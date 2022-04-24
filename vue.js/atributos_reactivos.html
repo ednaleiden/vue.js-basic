@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      const vm = Vue.createApp({
+        data() {
+          return {
+            atributo: "src",
+            img: "https://www.milenio.com/uploads/media/2022/03/16/halo-the-series-twitter.jpg",
+          };
+        },
+        template: '<img v-bind:[atributo]="img" vbind:alt="img">',
+      }).mount("#app");
+      console.log(vm);
+    </script>
+  </body>
+</html>
+<!--manipulacion de forma reactiva acceder con v-bind (permite modificar atributo con )directamente en js no en html -->
+<!--separa la directiva del argumento-->
+<!--variables en vue dinamivo v-bind:["src"]-->
